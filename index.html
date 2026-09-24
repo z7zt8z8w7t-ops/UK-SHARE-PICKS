@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07101d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Share Picks">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>UK Share Picks</title>
+<style>
+:root{--bg:#07101d;--panel:#101b2b;--line:#24344a;--text:#f5f7fb;--muted:#91a0b5;--green:#29d17d;--amber:#ffb020;--red:#ff5964;--blue:#55a7ff;--grey:#aab5c5}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#07101d,#0b1422);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+.wrap{max-width:620px;margin:auto;padding:calc(18px + env(safe-area-inset-top)) 14px calc(34px + env(safe-area-inset-bottom))}
+header{display:flex;justify-content:space-between;align-items:end;margin:2px 2px 14px}.title{font-size:25px;font-weight:900;letter-spacing:-.7px}.sub{font-size:11px;color:var(--muted);margin-top:3px}
+.fresh{font-size:11px;font-weight:850;color:var(--green);text-align:right}.stale{color:var(--red)}
+.pick{background:rgba(16,27,43,.97);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:13px;box-shadow:0 10px 30px rgba(0,0,0,.22)}.pick.top{border-color:#2b8d61}
+.topline{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.rank{font-size:10px;letter-spacing:1.2px;color:var(--muted);font-weight:850}.ticker{font-size:29px;font-weight:950;line-height:1}.name{font-size:13px;color:var(--muted);margin-top:4px}
+.badge{padding:8px 11px;border-radius:999px;font-size:11px;font-weight:950;white-space:nowrap;text-align:center}.buy{background:rgba(41,209,125,.16);color:var(--green);border:1px solid rgba(41,209,125,.45)}.wait{background:rgba(255,176,32,.14);color:var(--amber);border:1px solid rgba(255,176,32,.4)}.hold{background:rgba(85,167,255,.14);color:var(--blue);border:1px solid rgba(85,167,255,.4)}.sell,.avoid{background:rgba(255,89,100,.14);color:var(--red);border:1px solid rgba(255,89,100,.42)}.watch{background:rgba(119,133,154,.14);color:#c0cad8;border:1px solid rgba(119,133,154,.4)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px}.metric{background:#0a1422;border:1px solid #1d2b3e;border-radius:12px;padding:10px}.label{font-size:9px;color:var(--muted);font-weight:850;letter-spacing:.8px}.value{font-size:18px;font-weight:900;margin-top:3px}.target .value,.potential .value{color:var(--green)}.reconsider .value{color:var(--red)}
+.riskrow{margin-top:10px;display:flex;justify-content:space-between;gap:10px;align-items:center}.risk{font-size:12px;font-weight:850}.risk.low{color:var(--green)}.risk.medium{color:var(--amber)}.risk.high{color:var(--red)}
+.reason{margin-top:11px;padding-top:11px;border-top:1px solid #203047;font-size:12px;line-height:1.45;color:#c8d1df}.reason b{color:white}
+.section{font-size:12px;letter-spacing:1px;font-weight:900;color:#c5d0df;margin:21px 3px 9px}.upcoming{background:#0e1928;border:1px solid var(--line);border-radius:15px;overflow:hidden}.watchrow{padding:12px 13px;border-bottom:1px solid #1d2b3e;display:grid;grid-template-columns:58px 1fr auto;gap:9px;align-items:center}.watchrow:last-child{border-bottom:0}.wticker{font-weight:950}.winfo{font-size:11px;color:var(--muted);line-height:1.35}.wstatus{font-size:10px;font-weight:900}
+.legend{display:flex;gap:6px;flex-wrap:wrap;margin:0 2px 15px}.pill{font-size:9px;font-weight:900;border-radius:999px;padding:5px 8px}
+.footer{font-size:10px;color:#6f7e92;line-height:1.45;margin:15px 4px;text-align:center}.error{padding:22px;text-align:center;color:var(--red)}
+</style>
+</head>
+<body><main class="wrap">
+<header><div><div class="title">UK SHARE PICKS</div><div class="sub">Very short-term UK opportunities · v1</div></div><div id="fresh" class="fresh">LOADING…</div></header>
+<div class="legend"><span class="pill buy">BUY</span><span class="pill wait">WAIT</span><span class="pill hold">HOLD</span><span class="pill sell">SELL / EXIT</span><span class="pill watch">WATCH</span></div>
+<div id="picks"></div>
+<div class="section">NEXT UP · CATALYST WATCH</div><div id="watch" class="upcoming"></div>
+<div class="footer">Research aid, not a guarantee of return. Short-term targets are speculative. Prices can gap through reconsider/stop levels. Check the update time before acting.</div>
+</main>
+<script>
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const cls=a=>({'BUY':'buy','BUY BEFORE CATALYST':'buy','BUY ON CONFIRMATION':'buy','WAIT':'wait','WAIT FOR RESULTS':'wait','HOLD':'hold','SELL':'sell','EXIT':'sell','AVOID':'avoid','WATCH':'watch','NO TRADE':'avoid'}[String(a).toUpperCase()]||'watch');
+const riskClass=r=>{r=String(r).toLowerCase();return r.includes('high')?'high':r.includes('low')?'low':'medium'};
+function render(d){
+ const updated=new Date(d.updated), age=(Date.now()-updated)/36e5, stale=age>18;
+ const f=document.getElementById('fresh'); f.className='fresh'+(stale?' stale':'');
+ f.innerHTML=(stale?'● STALE':'● UPDATED')+'<br>'+esc(d.updatedLabel||updated.toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}));
+ document.getElementById('picks').innerHTML=(d.picks||[]).map((p,i)=>`<section class="pick ${i===0?'top':''}">
+ <div class="topline"><div><div class="rank">${i===0?'TOP PICK':'#'+(i+1)+' PICK'}</div><div class="ticker">${esc(p.ticker)}</div><div class="name">${esc(p.name)}</div></div><div class="badge ${cls(p.action)}">${esc(p.action)}</div></div>
+ <div class="grid"><div class="metric"><div class="label">BUY / ENTRY</div><div class="value">${esc(p.buy)}</div></div><div class="metric target"><div class="label">SELL TARGET</div><div class="value">${esc(p.target)}</div></div><div class="metric reconsider"><div class="label">RECONSIDER AT</div><div class="value">${esc(p.reconsider)}</div></div><div class="metric potential"><div class="label">POTENTIAL</div><div class="value">${esc(p.potential)}</div></div></div>
+ <div class="riskrow"><div class="risk ${riskClass(p.risk)}">RISK / REWARD · ${esc(p.risk)}</div><div class="risk">${esc(p.timeframe)}</div></div>
+ <div class="reason"><b>${esc(p.catalyst)}</b> · ${esc(p.reason)}</div></section>`).join('')||'<div class="error">No active picks.</div>';
+ document.getElementById('watch').innerHTML=(d.watchlist||[]).map(w=>`<div class="watchrow"><div class="wticker">${esc(w.ticker)}</div><div class="winfo"><b>${esc(w.date)}</b> · ${esc(w.catalyst)}</div><div class="wstatus ${cls(w.status)}">${esc(w.status)}</div></div>`).join('')||'<div class="watchrow"><div class="winfo">No upcoming catalysts currently highlighted.</div></div>';
+}
+fetch('./picks.json?ts='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(render).catch(()=>document.getElementById('picks').innerHTML='<div class="error">Could not load the latest picks. Pull down to refresh.</div>');
+if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
+</script></body></html>
