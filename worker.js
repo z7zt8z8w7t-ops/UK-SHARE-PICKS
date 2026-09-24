@@ -15,6 +15,25 @@ if (request.method === "GET" && url.searchParams.get("test") === "1") {
     githubToken: !!env.GITHUB_TOKEN
   });
 }
+if (request.method === "GET" && url.searchParams.get("github") === "check") {
+  const checkUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE}`;
+
+  const response = await fetch(checkUrl, {
+    headers: {
+      "Authorization": `Bearer ${env.GITHUB_TOKEN}`,
+      "Accept": "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "User-Agent": "UK-Share-Picks-Updater"
+    }
+  });
+
+  return json({
+    ok: response.ok,
+    githubStatus: response.status,
+    canReadPicks: response.ok
+  });
+}
+    
     if (request.method !== "POST") {
       return json({ ok: true, message: "UK SHARE PICKS updater is running" });
     }
