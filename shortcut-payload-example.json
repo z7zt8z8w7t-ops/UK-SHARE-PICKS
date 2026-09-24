@@ -1,0 +1,21 @@
+{
+  "secret": "PUT-YOUR-UPDATE-SECRET-HERE",
+  "payload": {
+    "picks": [
+      {
+        "ticker": "EXAMPLE",
+        "name": "Example plc",
+        "action": "WATCH",
+        "buy": "\u00a30.00",
+        "target": "\u00a30.00",
+        "reconsider": "\u00a30.00",
+        "potential": "+0%",
+        "risk": "Medium",
+        "timeframe": "1\u20135 trading days",
+        "catalyst": "Example catalyst",
+        "reason": "Replace this example with researched live data."
+      }
+    ],
+    "watchlist": []
+  }
+}

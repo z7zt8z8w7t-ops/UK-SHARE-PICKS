@@ -42,25 +42,122 @@ export default {
     try {
       body = await request.json();
     } catch {
-      return json({ ok: false, stage: "request", error: "Invalid JSON body" }, 400);
+      return json({
+        ok: false,
+        stage: "request",
+        error: "Invalid JSON body"
+      }, 400);
     }
 
-    // iOS Shortcuts-compatible authentication: secret travels in JSON, not a custom header.
     const suppliedSecret = body?.secret;
-    if (!env.UPDATE_SECRET || !suppliedSecret || suppliedSecret !== env.UPDATE_SECRET) {
-      return json({ ok: false, stage: "authentication", error: "Unauthorized" }, 401);
+    if (!env.UPDATE_SECRET || !suppliedSecret ||
+        suppliedSecret !== env.UPDATE_SECRET) {
+      return json({
+        ok: false,
+        stage: "authentication",
+        error: "Unauthorized"
+      }, 401);
     }
 
     if (!env.GITHUB_TOKEN) {
-      return json({ ok: false, stage: "config", error: "GITHUB_TOKEN is not configured" }, 500);
+      return json({
+        ok: false,
+        stage: "config",
+        error: "GITHUB_TOKEN is not configured"
+      }, 500);
     }
 
-    // Never save the authentication secret into the public picks.json file.
-    const { secret, ...newData } = body;
+    // Accept any of these Shortcut-friendly formats:
+    // 1) { secret, payload: { ...full picks object... } }
+    // 2) { secret, payload: "{...JSON text...}" }
+    // 3) { secret, data: { ...full picks object... } }
+    // 4) { secret, data: "{...JSON text...}" }
+    // 5) { secret, updated, picks, watchlist }
+    let newData = body.payload ?? body.data;
 
-    const current = await fetch(`${apiUrl}?ref=${encodeURIComponent(BRANCH)}`, {
-      headers: githubHeaders
-    });
+    if (typeof newData === "string") {
+      try {
+        newData = JSON.parse(newData);
+      } catch {
+        return json({
+          ok: false,
+          stage: "payload",
+          error: "The payload/data field contains invalid JSON text"
+        }, 400);
+      }
+    }
+
+    if (!newData) {
+      const { secret, ...directData } = body;
+      newData = directData;
+    }
+
+    if (!newData || typeof newData !== "object" || Array.isArray(newData)) {
+      return json({
+        ok: false,
+        stage: "payload",
+        error: "No valid share-picks object was supplied"
+      }, 400);
+    }
+
+    // Prevent another secret-only test from wiping picks.json.
+    if (!Array.isArray(newData.picks)) {
+      return json({
+        ok: false,
+        stage: "validation",
+        error: "Payload must contain a picks array"
+      }, 400);
+    }
+
+    if (!Array.isArray(newData.watchlist)) {
+      newData.watchlist = [];
+    }
+
+    // Fill the update timestamp automatically if omitted.
+    if (!newData.updated) {
+      newData.updated = new Date().toISOString();
+    }
+
+    if (!newData.updatedLabel) {
+      try {
+        newData.updatedLabel = new Intl.DateTimeFormat("en-GB", {
+          timeZone: "Europe/London",
+          day: "numeric",
+          month: "short",
+          hour: "2-digit",
+          minute: "2-digit"
+        }).format(new Date(newData.updated));
+      } catch {
+        newData.updatedLabel = newData.updated;
+      }
+    }
+
+    // Normalise expected display fields without changing supplied values.
+    newData.picks = newData.picks.map(p => ({
+      ticker: p?.ticker ?? "",
+      name: p?.name ?? "",
+      action: p?.action ?? "WATCH",
+      buy: p?.buy ?? "",
+      target: p?.target ?? "",
+      reconsider: p?.reconsider ?? "",
+      potential: p?.potential ?? "",
+      risk: p?.risk ?? "",
+      timeframe: p?.timeframe ?? "",
+      catalyst: p?.catalyst ?? "",
+      reason: p?.reason ?? ""
+    }));
+
+    newData.watchlist = newData.watchlist.map(w => ({
+      ticker: w?.ticker ?? "",
+      date: w?.date ?? "",
+      catalyst: w?.catalyst ?? "",
+      status: w?.status ?? "WATCH"
+    }));
+
+    const current = await fetch(
+      `${apiUrl}?ref=${encodeURIComponent(BRANCH)}`,
+      { headers: githubHeaders }
+    );
 
     if (!current.ok) {
       const replyText = await current.text();
@@ -74,7 +171,9 @@ export default {
 
     const currentFile = await current.json();
 
-    const bytes = new TextEncoder().encode(JSON.stringify(newData, null, 2) + "\n");
+    const bytes = new TextEncoder().encode(
+      JSON.stringify(newData, null, 2) + "\n"
+    );
     let binary = "";
     for (const byte of bytes) binary += String.fromCharCode(byte);
     const content = btoa(binary);
@@ -95,7 +194,11 @@ export default {
 
     const replyText = await update.text();
     let result;
-    try { result = JSON.parse(replyText); } catch { result = replyText; }
+    try {
+      result = JSON.parse(replyText);
+    } catch {
+      result = replyText;
+    }
 
     if (!update.ok) {
       return json({
@@ -111,6 +214,9 @@ export default {
       stage: "complete",
       message: "picks.json updated successfully",
       githubStatus: update.status,
+      picksWritten: newData.picks.length,
+      watchlistWritten: newData.watchlist.length,
+      updated: newData.updated,
       commit: result?.commit?.sha || null
     });
   }
