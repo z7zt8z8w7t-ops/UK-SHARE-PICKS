@@ -1,20 +1,59 @@
 {
   "picks": [
     {
-      "ticker": "TEST",
-      "name": "Test plc",
-      "action": "WATCH",
-      "buy": "£1.00",
-      "target": "£1.10",
-      "reconsider": "£0.95",
-      "potential": "+10%",
+      "ticker": "HLMA",
+      "name": "Halma plc",
+      "action": "BUY / WATCH",
+      "buy": "£35.50–£36.20",
+      "target": "£38.00",
+      "reconsider": "Below £34.50",
+      "potential": "+5–7%",
       "risk": "Medium",
-      "timeframe": "1–5 trading days",
-      "catalyst": "Test catalyst",
-      "reason": "Clipboard test only"
+      "timeframe": "2–6 weeks",
+      "catalyst": "Trading update raised full-year adjusted EBIT margin guidance",
+      "reason": "Strong broad-based first-half progress and upgraded margin outlook. Avoid chasing a sharp intraday spike."
+    },
+    {
+      "ticker": "CWR",
+      "name": "Ceres Power Holdings plc",
+      "action": "WATCH",
+      "buy": "Wait for strength/volume confirmation",
+      "target": "Tactical trade only",
+      "reconsider": "If post-results momentum fades",
+      "potential": "High but volatile",
+      "risk": "High",
+      "timeframe": "Days to weeks",
+      "catalyst": "Interim results showed revenue growth and materially improved EBITDA loss",
+      "reason": "Improving cost discipline and commercial progress, but still loss-making and highly volatile."
+    },
+    {
+      "ticker": "W7L",
+      "name": "Warpaint London plc",
+      "action": "AVOID / WATCH",
+      "buy": "Do not buy yet",
+      "target": "Wait for base to form",
+      "reconsider": "Only after price stabilises and outlook improves",
+      "potential": "Recovery possible",
+      "risk": "High",
+      "timeframe": "Watchlist",
+      "catalyst": "Post-results repricing",
+      "reason": "Interim revenue and EBITDA fell materially year-on-year, so I would wait for evidence the sell-off has stabilised."
     }
   ],
-  "watchlist": [],
-  "updated": "2026-09-24T15:58:38.964Z",
-  "updatedLabel": "24 Sept, 16:58"
+  "watchlist": [
+    {
+      "ticker": "CVSG",
+      "date": "24 Sep 2026",
+      "catalyst": "Full-year results: revenue +5.9%, LFL sales +2.1%, continued Australian expansion",
+      "status": "WATCH"
+    },
+    {
+      "ticker": "W7L",
+      "date": "23 Sep 2026",
+      "catalyst": "Weak interim results and sharp post-results fall",
+      "status": "WAIT FOR STABILISATION"
+    }
+  ],
+  "updated": "2026-09-24T16:01:36.906Z",
+  "updatedLabel": "24 Sept, 17:01"
 }
