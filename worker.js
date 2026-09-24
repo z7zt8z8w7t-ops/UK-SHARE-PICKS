@@ -32,6 +32,30 @@ if (request.method === "GET" && url.searchParams.get("github") === "check") {
     githubStatus: response.status,
     canReadPicks: response.ok
   });
+  if (request.method === "GET" && url.searchParams.get("github") === "write") {
+  const testUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/worker-write-test.txt`;
+
+  const headers = {
+    "Authorization": `Bearer ${env.GITHUB_TOKEN}`,
+    "Accept": "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "User-Agent": "UK-Share-Picks-Updater"
+  };
+
+  const response = await fetch(testUrl, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({
+      message: "Cloudflare Worker write test",
+      content: btoa("Cloudflare Worker can write to GitHub.")
+    })
+  });
+
+  return json({
+    ok: response.ok,
+    githubStatus: response.status,
+    canWriteToGitHub: response.ok
+  });
 }
     
     if (request.method !== "POST") {
