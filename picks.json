@@ -1,6 +1,20 @@
 {
-  "picks": [],
+  "picks": [
+    {
+      "ticker": "TEST",
+      "name": "Test plc",
+      "action": "WATCH",
+      "buy": "£1.00",
+      "target": "£1.10",
+      "reconsider": "£0.95",
+      "potential": "+10%",
+      "risk": "Medium",
+      "timeframe": "1–5 trading days",
+      "catalyst": "Test catalyst",
+      "reason": "Clipboard test only"
+    }
+  ],
   "watchlist": [],
-  "updated": "2026-09-24T15:56:47.785Z",
-  "updatedLabel": "24 Sept, 16:56"
+  "updated": "2026-09-24T15:58:38.964Z",
+  "updatedLabel": "24 Sept, 16:58"
 }
