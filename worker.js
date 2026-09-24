@@ -4,6 +4,10 @@ export default {
     const REPO = "UK-SHARE-PICKS";
     const FILE = "picks.json";
 
+    const url = new URL(request.url);
+if (request.method === "GET" && url.searchParams.get("test") === "1") {
+  return json({ ok: true, message: "Test route working" });
+}
     if (request.method !== "POST") {
       return json({ ok: true, message: "UK SHARE PICKS updater is running" });
     }
