@@ -8,6 +8,13 @@ export default {
 if (request.method === "GET" && url.searchParams.get("test") === "1") {
   return json({ ok: true, message: "Test route working" });
 }
+  if (request.method === "GET" && url.searchParams.get("secrets") === "check") {
+  return json({
+    ok: true,
+    updateSecret: !!env.UPDATE_SECRET,
+    githubToken: !!env.GITHUB_TOKEN
+  });
+}
     if (request.method !== "POST") {
       return json({ ok: true, message: "UK SHARE PICKS updater is running" });
     }
