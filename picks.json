@@ -1,59 +1,59 @@
 {
   "picks": [
     {
-      "ticker": "HLMA",
-      "name": "Halma plc",
-      "action": "BUY / WATCH",
-      "buy": "£35.50–£36.20",
-      "target": "£38.00",
-      "reconsider": "Below £34.50",
-      "potential": "+5–7%",
-      "risk": "Medium",
-      "timeframe": "2–6 weeks",
-      "catalyst": "Trading update raised full-year adjusted EBIT margin guidance",
-      "reason": "Strong broad-based first-half progress and upgraded margin outlook. Avoid chasing a sharp intraday spike."
+      "ticker": "TLW",
+      "name": "Tullow Oil plc",
+      "action": "WAIT FOR RESULTS",
+      "buy": "≤21.0p, conditional",
+      "target": "23.0p scenario",
+      "reconsider": "Below 20.4p",
+      "potential": "+9.5% gross",
+      "risk": "Very high",
+      "timeframe": "1–5 trading days",
+      "catalyst": "28 Sep half-year results",
+      "reason": "24 Sep Trading 212 buying close: 21.75p. Wait for results; check the current ask and spread. Debt and gap risk are substantial."
     },
     {
-      "ticker": "CWR",
-      "name": "Ceres Power Holdings plc",
+      "ticker": "CARD",
+      "name": "Card Factory plc",
+      "action": "WAIT FOR RESULTS",
+      "buy": "≤71.0p, conditional",
+      "target": "76.0p scenario",
+      "reconsider": "Below 68.0p",
+      "potential": "+7.0% gross",
+      "risk": "High",
+      "timeframe": "2–5 trading days",
+      "catalyst": "29 Sep interim results",
+      "reason": "24 Sep Trading 212 buying close: 71.20p. Reassess after the results, margin guidance and current spread."
+    },
+    {
+      "ticker": "BAG",
+      "name": "A.G. Barr plc",
       "action": "WATCH",
-      "buy": "Wait for strength/volume confirmation",
-      "target": "Tactical trade only",
-      "reconsider": "If post-results momentum fades",
-      "potential": "High but volatile",
-      "risk": "High",
-      "timeframe": "Days to weeks",
-      "catalyst": "Interim results showed revenue growth and materially improved EBITDA loss",
-      "reason": "Improving cost discipline and commercial progress, but still loss-making and highly volatile."
-    },
-    {
-      "ticker": "W7L",
-      "name": "Warpaint London plc",
-      "action": "AVOID / WATCH",
-      "buy": "Do not buy yet",
-      "target": "Wait for base to form",
-      "reconsider": "Only after price stabilises and outlook improves",
-      "potential": "Recovery possible",
-      "risk": "High",
-      "timeframe": "Watchlist",
-      "catalyst": "Post-results repricing",
-      "reason": "Interim revenue and EBITDA fell materially year-on-year, so I would wait for evidence the sell-off has stabilised."
+      "buy": "586–590p, conditional",
+      "target": "630p scenario",
+      "reconsider": "Below 580p",
+      "potential": "+6.8% gross",
+      "risk": "Medium-high",
+      "timeframe": "2–5 trading days",
+      "catalyst": "29 Sep interim results",
+      "reason": "24 Sep Trading 212 buying close: 594p. Watch the pullback; verify the current ask, spread and guidance."
     }
   ],
   "watchlist": [
     {
-      "ticker": "CVSG",
-      "date": "24 Sep 2026",
-      "catalyst": "Full-year results: revenue +5.9%, LFL sales +2.1%, continued Australian expansion",
+      "ticker": "RCN",
+      "date": "28 Sep 2026",
+      "catalyst": "Full-year results; check AIM liquidity and spread",
       "status": "WATCH"
     },
     {
-      "ticker": "W7L",
-      "date": "23 Sep 2026",
-      "catalyst": "Weak interim results and sharp post-results fall",
-      "status": "WAIT FOR STABILISATION"
+      "ticker": "LIKE",
+      "date": "28 Sep 2026",
+      "catalyst": "Interim results; check Trading 212 availability",
+      "status": "WATCH"
     }
   ],
-  "updated": "2026-09-24T16:01:36.906Z",
-  "updatedLabel": "24 Sept, 17:01"
+  "updated": "2026-09-25T06:27:00Z",
+  "updatedLabel": "25 Sep 07:27 pre-open"
 }
