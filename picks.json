@@ -7,11 +7,11 @@
       "buy": "≤21.0p, conditional",
       "target": "23.0p scenario",
       "reconsider": "Below 20.4p",
-      "potential": "+9.5% gross",
+      "potential": "+9.5% gross from 21.0p",
       "risk": "Very high",
       "timeframe": "1–5 trading days",
       "catalyst": "28 Sep half-year results",
-      "reason": "24 Sep Trading 212 buying close: 21.75p. Wait for results; check the current ask and spread. Debt and gap risk are substantial."
+      "reason": "LSE quote delayed 15 min: 21.05p, bid 20.80p, ask 21.10p; latest visible trade 08:09 BST. Ask exceeds entry limit. Debt and weekend gap risk: no buy signal."
     },
     {
       "ticker": "CARD",
@@ -20,11 +20,11 @@
       "buy": "≤71.0p, conditional",
       "target": "76.0p scenario",
       "reconsider": "Below 68.0p",
-      "potential": "+7.0% gross",
+      "potential": "+7.0% gross from 71.0p",
       "risk": "High",
       "timeframe": "2–5 trading days",
       "catalyst": "29 Sep interim results",
-      "reason": "24 Sep Trading 212 buying close: 71.20p. Reassess after the results, margin guidance and current spread."
+      "reason": "LSE quote delayed 15 min: 71.50p, bid 71.40p, ask 71.60p; latest visible trade 08:44 BST. Wait for margins and guidance; ask exceeds entry limit."
     },
     {
       "ticker": "BAG",
@@ -33,11 +33,11 @@
       "buy": "586–590p, conditional",
       "target": "630p scenario",
       "reconsider": "Below 580p",
-      "potential": "+6.8% gross",
+      "potential": "+6.8% gross from 590p",
       "risk": "Medium-high",
       "timeframe": "2–5 trading days",
       "catalyst": "29 Sep interim results",
-      "reason": "24 Sep Trading 212 buying close: 594p. Watch the pullback; verify the current ask, spread and guidance."
+      "reason": "LSE quote delayed 15 min: 595p, bid 594p, ask 596p; latest visible trade 08:43 BST. Ask exceeds watch range; check guidance and current spread."
     }
   ],
   "watchlist": [
@@ -50,10 +50,10 @@
     {
       "ticker": "LIKE",
       "date": "28 Sep 2026",
-      "catalyst": "Interim results; check Trading 212 availability",
+      "catalyst": "Interim results; verify Trading 212 availability",
       "status": "WATCH"
     }
   ],
-  "updated": "2026-09-25T06:27:00Z",
-  "updatedLabel": "25 Sep 07:27 pre-open"
+  "updated": "2026-09-25T08:00:00Z",
+  "updatedLabel": "25 Sep 09:00 BST"
 }
