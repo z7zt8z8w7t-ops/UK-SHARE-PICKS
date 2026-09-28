@@ -3,63 +3,43 @@
     {
       "ticker": "TLW",
       "name": "Tullow Oil",
-      "action": "WAIT FOR RESULTS",
-      "buy": "No entry",
-      "target": "Not set",
-      "reconsider": "Cash flow or debt disappoints",
-      "potential": "N/A",
-      "risk": "Very high",
-      "timeframe": "Review today",
-      "catalyst": "H1 results · 28 Sep",
-      "reason": "Confirm cash-flow guidance after results."
-    },
-    {
-      "ticker": "CARD",
-      "name": "Card Factory",
-      "action": "WAIT FOR RESULTS",
-      "buy": "No entry",
-      "target": "Not set",
-      "reconsider": "Sales or margins weaken",
-      "potential": "N/A",
-      "risk": "High",
-      "timeframe": "Review 29 Sep",
-      "catalyst": "H1 results · 29 Sep",
-      "reason": "Needs evidence of improving trading."
-    },
-    {
-      "ticker": "BAG",
-      "name": "A.G. Barr",
-      "action": "WATCH",
-      "buy": "No entry",
-      "target": "Not set",
-      "reconsider": "Supply issues persist",
-      "potential": "N/A",
-      "risk": "High",
-      "timeframe": "Review 29 Sep",
-      "catalyst": "H1 results · 29 Sep",
-      "reason": "Check recovery from stock shortages."
+      "action": "BUY ON CONFIRMATION",
+      "buy": "21.5–22p max; after 08:15",
+      "target": "25p",
+      "reconsider": "Below 20.5p",
+      "potential": "Up to 13.6% gross",
+      "risk": "High debt; opening gap",
+      "timeframe": "1–5 trading days",
+      "catalyst": "28 Sep: H1 results",
+      "reason": "Strong production and cash recovery; wait for a tradable opening price."
     }
   ],
   "watchlist": [
     {
-      "ticker": "LIKE",
-      "date": "2026-09-28",
-      "catalyst": "H1 results; check spread",
+      "ticker": "CBG",
+      "date": "29 Sep",
+      "catalyst": "Full-year results",
+      "status": "WAIT FOR RESULTS"
+    },
+    {
+      "ticker": "CARD",
+      "date": "29 Sep",
+      "catalyst": "Half-year results",
       "status": "WATCH"
     },
     {
-      "ticker": "RCN",
-      "date": "2026-09-28",
-      "catalyst": "FY results; verify Trading 212",
+      "ticker": "FUTR",
+      "date": "30 Sep",
+      "catalyst": "Trading statement",
       "status": "WATCH"
     },
     {
-      "ticker": "GRG",
-      "date": "2026-09-30",
-      "catalyst": "Q3 trading update",
+      "ticker": "JDW",
+      "date": "2 Oct",
+      "catalyst": "Full-year results",
       "status": "WATCH"
     }
   ],
-  "updated": "2026-09-28T06:34:52Z",
-  "updatedLabel": "07:34 BST · 28 Sep 2026"
+  "updated": "2026-09-28T07:54:00+01:00",
+  "updatedLabel": "28 Sep 2026, 07:54 BST"
 }
