@@ -4,62 +4,62 @@
       "ticker": "TLW",
       "name": "Tullow Oil",
       "action": "WAIT FOR RESULTS",
-      "buy": "NO ORDER. Reassess the live Trading 212 ask and a limit price after Monday's results. Trading 212 Invest indicative buying price 20.89p when checked about 15:04 BST, 25 Sep; provider gives no quote timestamp.",
-      "target": "Not set before results",
-      "reconsider": "Withdraw if cash-flow guidance weakens, debt rises unexpectedly, or the results prompt a gap beyond a sensible limit.",
-      "potential": "Not calculated: no validated entry or executable exit price.",
-      "risk": "Very high: about $1.4bn net debt at 30 Jun; oil-price and results-gap risk. Current executable spread unverified.",
-      "timeframe": "Reassess Monday 28 Sep; possible 1–5 trading-day trade only after confirmation.",
-      "catalyst": "Half-year results, Monday 28 Sep 2026.",
-      "reason": "Trading 212 Invest instrument TLW.GB verified; August cash-flow upgrade creates a results catalyst, but today's buying indication is below the morning reference and the live ask is unverified."
+      "buy": "No entry",
+      "target": "Not set",
+      "reconsider": "Cash flow or debt disappoints",
+      "potential": "N/A",
+      "risk": "Very high",
+      "timeframe": "Review today",
+      "catalyst": "H1 results · 28 Sep",
+      "reason": "Confirm cash-flow guidance after results."
     },
     {
       "ticker": "CARD",
       "name": "Card Factory",
       "action": "WAIT FOR RESULTS",
-      "buy": "NO ORDER. Check Tuesday's results and a fresh Trading 212 limit quote. Trading 212 Invest indicative buying price 71.6p when checked about 15:04 BST, 25 Sep; provider gives no quote timestamp.",
-      "target": "Not set before results",
-      "reconsider": "Withdraw if like-for-like sales, margins or debt deteriorate, or the opening gap removes the reward.",
-      "potential": "Not calculated: no validated entry or executable exit price.",
-      "risk": "High: FY26 pretax profit fell to £43.9m from £64.1m; consumer demand and results-gap risk. Current executable spread unverified.",
-      "timeframe": "Reassess Tuesday 29 Sep; possible 1–5 trading-day trade only after confirmation.",
-      "catalyst": "Interim results, Tuesday 29 Sep 2026.",
-      "reason": "Trading 212 Invest instrument CARD.GB verified; results may reset expectations, but the earlier sub-71p idea is not a valid order at the observed indication."
+      "buy": "No entry",
+      "target": "Not set",
+      "reconsider": "Sales or margins weaken",
+      "potential": "N/A",
+      "risk": "High",
+      "timeframe": "Review 29 Sep",
+      "catalyst": "H1 results · 29 Sep",
+      "reason": "Needs evidence of improving trading."
     },
     {
       "ticker": "BAG",
       "name": "A.G. Barr",
       "action": "WATCH",
-      "buy": "NO ORDER. Verify a live Trading 212 ask, displayed size and limit before reconsidering. Trading 212 Invest indicative buying price about 595p when checked about 15:04 BST, 25 Sep; provider gives no quote timestamp.",
+      "buy": "No entry",
       "target": "Not set",
-      "reconsider": "Withdraw if Tuesday's results show supply problems persisting or full-year profit guidance weakening.",
-      "potential": "Not calculated: no validated entry or executable exit price.",
-      "risk": "High: company estimated £10m of first-half revenue lost to stock availability; a roughly £5,000 order may move through displayed liquidity. Results-gap risk.",
-      "timeframe": "Prepare for Tuesday 29 Sep; reassess after results.",
-      "catalyst": "Interim results, Tuesday 29 Sep 2026.",
-      "reason": "Trading 212 Invest instrument BAG.GB verified; guidance is maintained, but the supply-chain recovery needs evidence and the morning entry range has not appeared."
+      "reconsider": "Supply issues persist",
+      "potential": "N/A",
+      "risk": "High",
+      "timeframe": "Review 29 Sep",
+      "catalyst": "H1 results · 29 Sep",
+      "reason": "Check recovery from stock shortages."
     }
   ],
   "watchlist": [
     {
-      "ticker": "RCN",
+      "ticker": "LIKE",
       "date": "2026-09-28",
-      "catalyst": "Redcentric full-year results; verify Trading 212 availability, spread and liquidity before any trade.",
+      "catalyst": "H1 results; check spread",
       "status": "WATCH"
     },
     {
-      "ticker": "LIKE",
+      "ticker": "RCN",
       "date": "2026-09-28",
-      "catalyst": "Likewise half-year results; verify Trading 212 availability, spread and liquidity before any trade.",
+      "catalyst": "FY results; verify Trading 212",
       "status": "WATCH"
     },
     {
       "ticker": "GRG",
       "date": "2026-09-30",
-      "catalyst": "Greggs trading statement; prepare a comparison with prior guidance, then verify Trading 212 availability and quote.",
+      "catalyst": "Q3 trading update",
       "status": "WATCH"
     }
   ],
-  "updated": "2026-09-25T14:04:28Z",
-  "updatedLabel": "15:04 BST, Friday 25 September 2026"
+  "updated": "2026-09-28T06:34:52Z",
+  "updatedLabel": "07:34 BST · 28 Sep 2026"
 }
