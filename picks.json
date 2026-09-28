@@ -3,15 +3,41 @@
     {
       "ticker": "TLW",
       "name": "Tullow Oil",
-      "action": "BUY ON CONFIRMATION",
-      "buy": "21.5–22p max; after 08:15",
-      "target": "25p",
-      "reconsider": "Below 20.5p",
-      "potential": "Up to 13.6% gross",
-      "risk": "High debt; opening gap",
-      "timeframe": "1–5 trading days",
+      "action": "NO TRADE",
+      "buy": "No entry",
+      "target": "Not set",
+      "reconsider": "Reassess after price stabilises",
+      "potential": "N/A",
+      "risk": "High debt; weak result-day price",
+      "timeframe": "1–5 days",
       "catalyst": "28 Sep: H1 results",
-      "reason": "Strong production and cash recovery; wait for a tradable opening price."
+      "reason": "Morning confirmation did not develop; the earlier entry is withdrawn."
+    },
+    {
+      "ticker": "LIKE",
+      "name": "Likewise Group",
+      "action": "WATCH",
+      "buy": "No entry",
+      "target": "Not set",
+      "reconsider": "Needs price confirmation",
+      "potential": "N/A",
+      "risk": "Wide spread; recent share issue",
+      "timeframe": "1–5 days",
+      "catalyst": "28 Sep: H1 results",
+      "reason": "Profit outlook improved, but the opening gain faded."
+    },
+    {
+      "ticker": "CARD",
+      "name": "Card Factory",
+      "action": "WAIT FOR RESULTS",
+      "buy": "No entry",
+      "target": "Not set",
+      "reconsider": "Check guidance and debt",
+      "potential": "N/A",
+      "risk": "Results gap",
+      "timeframe": "29 Sep onward",
+      "catalyst": "29 Sep: H1 results",
+      "reason": "Tomorrow's figures could change the case; no pre-results entry qualifies."
     }
   ],
   "watchlist": [
@@ -19,27 +45,33 @@
       "ticker": "CBG",
       "date": "29 Sep",
       "catalyst": "Full-year results",
-      "status": "WAIT FOR RESULTS"
+      "status": "Wait for capital outlook"
     },
     {
-      "ticker": "CARD",
+      "ticker": "BAG",
       "date": "29 Sep",
       "catalyst": "Half-year results",
-      "status": "WATCH"
+      "status": "Watch guidance"
     },
     {
       "ticker": "FUTR",
       "date": "30 Sep",
       "catalyst": "Trading statement",
-      "status": "WATCH"
+      "status": "Watch; price has risen"
+    },
+    {
+      "ticker": "GRG",
+      "date": "30 Sep",
+      "catalyst": "Q3 trading update",
+      "status": "Watch"
     },
     {
       "ticker": "JDW",
       "date": "2 Oct",
       "catalyst": "Full-year results",
-      "status": "WATCH"
+      "status": "Prepare"
     }
   ],
-  "updated": "2026-09-28T07:54:00+01:00",
-  "updatedLabel": "28 Sep 2026, 07:54 BST"
+  "updated": "2026-09-28T15:08:00+01:00",
+  "updatedLabel": "28 Sep 2026, 15:08 BST"
 }
