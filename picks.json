@@ -1,77 +1,71 @@
 {
   "picks": [
     {
-      "ticker": "TLW",
-      "name": "Tullow Oil",
-      "action": "NO TRADE",
-      "buy": "No entry",
-      "target": "Not set",
-      "reconsider": "Reassess after price stabilises",
-      "potential": "N/A",
-      "risk": "High debt; weak result-day price",
-      "timeframe": "1–5 days",
-      "catalyst": "28 Sep: H1 results",
-      "reason": "Morning confirmation did not develop; the earlier entry is withdrawn."
+      "ticker": "BILN",
+      "name": "Billington Holdings",
+      "action": "BUY ON CONFIRMATION",
+      "buy": "460–470p max",
+      "target": "525p",
+      "reconsider": "Below 430p",
+      "potential": "+11.7% gross",
+      "risk": "High; small-cap spread",
+      "timeframe": "2–10 days",
+      "catalyst": "29 Sep: strong H1",
+      "reason": "Profit +70% with a record order book."
     },
     {
-      "ticker": "LIKE",
-      "name": "Likewise Group",
-      "action": "WATCH",
-      "buy": "No entry",
-      "target": "Not set",
-      "reconsider": "Needs price confirmation",
-      "potential": "N/A",
-      "risk": "Wide spread; recent share issue",
-      "timeframe": "1–5 days",
-      "catalyst": "28 Sep: H1 results",
-      "reason": "Profit outlook improved, but the opening gain faded."
+      "ticker": "MTEC",
+      "name": "Made Tech",
+      "action": "BUY ON CONFIRMATION",
+      "buy": "52–55p max",
+      "target": "62p",
+      "reconsider": "Below 49p",
+      "potential": "+12.7% gross",
+      "risk": "High; AIM volatility",
+      "timeframe": "2–10 days",
+      "catalyst": "29 Sep: FY results",
+      "reason": "Revenue +27%, EBITDA +69% and £14.5m net cash."
     },
     {
       "ticker": "CARD",
       "name": "Card Factory",
-      "action": "WAIT FOR RESULTS",
-      "buy": "No entry",
-      "target": "Not set",
-      "reconsider": "Check guidance and debt",
-      "potential": "N/A",
-      "risk": "Results gap",
-      "timeframe": "29 Sep onward",
+      "action": "BUY ON CONFIRMATION",
+      "buy": "72–75p max",
+      "target": "83p",
+      "reconsider": "Below 68p",
+      "potential": "+10.7% gross",
+      "risk": "Medium-high; consumer and debt",
+      "timeframe": "3–15 days",
       "catalyst": "29 Sep: H1 results",
-      "reason": "Tomorrow's figures could change the case; no pre-results entry qualifies."
+      "reason": "Cash flow improved and post-period trading strengthened."
     }
   ],
   "watchlist": [
     {
-      "ticker": "CBG",
-      "date": "29 Sep",
-      "catalyst": "Full-year results",
-      "status": "Wait for capital outlook"
-    },
-    {
-      "ticker": "BAG",
-      "date": "29 Sep",
-      "catalyst": "Half-year results",
-      "status": "Watch guidance"
-    },
-    {
-      "ticker": "FUTR",
-      "date": "30 Sep",
-      "catalyst": "Trading statement",
-      "status": "Watch; price has risen"
+      "ticker": "TRB",
+      "date": "2 Oct",
+      "catalyst": "Shareholder vote after 111p possible offer",
+      "status": "WATCH; likely gap"
     },
     {
       "ticker": "GRG",
       "date": "30 Sep",
       "catalyst": "Q3 trading update",
-      "status": "Watch"
+      "status": "WAIT FOR RESULTS"
+    },
+    {
+      "ticker": "FUTR",
+      "date": "30 Sep",
+      "catalyst": "Trading statement",
+      "status": "WAIT FOR RESULTS"
     },
     {
       "ticker": "JDW",
       "date": "2 Oct",
       "catalyst": "Full-year results",
-      "status": "Prepare"
+      "status": "WATCH; prior warning"
     }
   ],
-  "updated": "2026-09-28T15:08:00+01:00",
-  "updatedLabel": "28 Sep 2026, 15:08 BST"
+  "updated": "2026-09-29T07:32:28+01:00",
+  "updatedLabel": "07:32 BST, 29 Sep 2026"
 }
