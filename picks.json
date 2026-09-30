@@ -1,71 +1,90 @@
 {
   "picks": [
     {
-      "ticker": "BILN",
-      "name": "Billington Holdings",
+      "ticker": "EVPL",
+      "name": "Everplay Group",
       "action": "BUY ON CONFIRMATION",
-      "buy": "460–470p max",
-      "target": "525p",
-      "reconsider": "Below 430p",
-      "potential": "+11.7% gross",
-      "risk": "High; small-cap spread",
+      "buy": "430–450p max",
+      "target": "500p",
+      "reconsider": "Below 408p",
+      "potential": "+11.1% gross",
+      "risk": "High; game momentum can reverse",
       "timeframe": "2–10 days",
-      "catalyst": "29 Sep: strong H1",
-      "reason": "Profit +70% with a record order book."
+      "catalyst": "30 Sep upgrade",
+      "reason": "Two major games beat forecasts; FY26 materially ahead."
     },
     {
-      "ticker": "MTEC",
-      "name": "Made Tech",
+      "ticker": "SAGA",
+      "name": "Saga",
       "action": "BUY ON CONFIRMATION",
-      "buy": "52–55p max",
-      "target": "62p",
-      "reconsider": "Below 49p",
-      "potential": "+12.7% gross",
-      "risk": "High; AIM volatility",
+      "buy": "645–670p max",
+      "target": "740p",
+      "reconsider": "Below 610p",
+      "potential": "+10.4% gross",
+      "risk": "High debt and results-gap risk",
       "timeframe": "2–10 days",
-      "catalyst": "29 Sep: FY results",
-      "reason": "Revenue +27%, EBITDA +69% and £14.5m net cash."
+      "catalyst": "30 Sep interims",
+      "reason": "Profit nearly doubled and debt reduced faster than planned."
     },
     {
-      "ticker": "CARD",
-      "name": "Card Factory",
+      "ticker": "FVA",
+      "name": "Fevara",
       "action": "BUY ON CONFIRMATION",
-      "buy": "72–75p max",
-      "target": "83p",
-      "reconsider": "Below 68p",
-      "potential": "+10.7% gross",
-      "risk": "Medium-high; consumer and debt",
+      "buy": "142–148p max",
+      "target": "165p",
+      "reconsider": "Below 132p",
+      "potential": "+11.5% gross",
+      "risk": "Wide spread; small-cap liquidity",
+      "timeframe": "2–10 days",
+      "catalyst": "30 Sep upgrade",
+      "reason": "EBIT rose about 60% with better-than-expected debt."
+    },
+    {
+      "ticker": "GRG",
+      "name": "Greggs",
+      "action": "BUY ON CONFIRMATION",
+      "buy": "1900–1940p max",
+      "target": "2100p",
+      "reconsider": "Below 1810p",
+      "potential": "+8.2% gross",
+      "risk": "£60m restructuring and 2027 costs",
       "timeframe": "3–15 days",
-      "catalyst": "29 Sep: H1 results",
-      "reason": "Cash flow improved and post-period trading strengthened."
+      "catalyst": "30 Sep Q3 update",
+      "reason": "Sales accelerated and the 2026 outlook was upgraded."
     }
   ],
   "watchlist": [
     {
-      "ticker": "TRB",
-      "date": "2 Oct",
-      "catalyst": "Shareholder vote after 111p possible offer",
-      "status": "WATCH; likely gap"
+      "ticker": "AVG",
+      "date": "30 Sep",
+      "catalyst": "Results plus nuclear acquisition",
+      "status": "WATCH — needs breakout above 740p"
     },
     {
-      "ticker": "GRG",
+      "ticker": "MRK",
       "date": "30 Sep",
-      "catalyst": "Q3 trading update",
-      "status": "WAIT FOR RESULTS"
+      "catalyst": "Profit upgrade",
+      "status": "WATCH — needs volume and tight spread"
     },
     {
-      "ticker": "FUTR",
-      "date": "30 Sep",
-      "catalyst": "Trading statement",
+      "ticker": "JHD",
+      "date": "1 Oct",
+      "catalyst": "Full-year results",
       "status": "WAIT FOR RESULTS"
     },
     {
       "ticker": "JDW",
       "date": "2 Oct",
       "catalyst": "Full-year results",
-      "status": "WATCH; prior warning"
+      "status": "WAIT FOR RESULTS"
+    },
+    {
+      "ticker": "TRB",
+      "date": "2 Oct",
+      "catalyst": "Transaction vote",
+      "status": "WATCH — complex competing proposal"
     }
   ],
-  "updated": "2026-09-29T07:32:28+01:00",
-  "updatedLabel": "07:32 BST, 29 Sep 2026"
+  "updated": "2026-09-30T07:36:23+01:00",
+  "updatedLabel": "07:36 UK, Wed 30 Sep 2026"
 }
