@@ -1,90 +1,71 @@
 {
   "picks": [
     {
-      "ticker": "EVPL",
-      "name": "Everplay Group",
+      "ticker": "ENSI",
+      "name": "EnSilica",
       "action": "BUY ON CONFIRMATION",
-      "buy": "430–450p max",
-      "target": "500p",
-      "reconsider": "Below 408p",
-      "potential": "+11.1% gross",
-      "risk": "High; game momentum can reverse",
-      "timeframe": "2–10 days",
-      "catalyst": "30 Sep upgrade",
-      "reason": "Two major games beat forecasts; FY26 materially ahead."
+      "buy": "75–78p max",
+      "target": "88–91p",
+      "reconsider": "Below 70.5p",
+      "potential": "13–21% gross",
+      "risk": "High: spread and dilution",
+      "timeframe": "1–5 days",
+      "catalyst": "FY26 results today",
+      "reason": "Record results; 80% of FY27 revenue visible."
     },
     {
-      "ticker": "SAGA",
-      "name": "Saga",
+      "ticker": "ITH",
+      "name": "Ithaca Energy",
       "action": "BUY ON CONFIRMATION",
-      "buy": "645–670p max",
-      "target": "740p",
-      "reconsider": "Below 610p",
-      "potential": "+10.4% gross",
-      "risk": "High debt and results-gap risk",
-      "timeframe": "2–10 days",
-      "catalyst": "30 Sep interims",
-      "reason": "Profit nearly doubled and debt reduced faster than planned."
+      "buy": "276–282p max",
+      "target": "298p",
+      "reconsider": "Below 267.5p",
+      "potential": "6–8% gross",
+      "risk": "High: oil and acquisition risk",
+      "timeframe": "1–5 days",
+      "catalyst": "Acquisition presentation 09:00",
+      "reason": "Transformational assets are expected to lift cash flow and dividends."
     },
     {
-      "ticker": "FVA",
-      "name": "Fevara",
+      "ticker": "SRE",
+      "name": "Sirius Real Estate",
       "action": "BUY ON CONFIRMATION",
-      "buy": "142–148p max",
-      "target": "165p",
-      "reconsider": "Below 132p",
-      "potential": "+11.5% gross",
-      "risk": "Wide spread; small-cap liquidity",
-      "timeframe": "2–10 days",
-      "catalyst": "30 Sep upgrade",
-      "reason": "EBIT rose about 60% with better-than-expected debt."
-    },
-    {
-      "ticker": "GRG",
-      "name": "Greggs",
-      "action": "BUY ON CONFIRMATION",
-      "buy": "1900–1940p max",
-      "target": "2100p",
-      "reconsider": "Below 1810p",
-      "potential": "+8.2% gross",
-      "risk": "£60m restructuring and 2027 costs",
-      "timeframe": "3–15 days",
-      "catalyst": "30 Sep Q3 update",
-      "reason": "Sales accelerated and the 2026 outlook was upgraded."
+      "buy": "86.5–88.5p max",
+      "target": "94p",
+      "reconsider": "Below 83.5p",
+      "potential": "6–9% gross",
+      "risk": "Medium-high: rates and property sentiment",
+      "timeframe": "3–10 days",
+      "catalyst": "Strong trading update today",
+      "reason": "Strong rent growth contrasts with a price near its yearly low."
     }
   ],
   "watchlist": [
     {
-      "ticker": "AVG",
-      "date": "30 Sep",
-      "catalyst": "Results plus nuclear acquisition",
-      "status": "WATCH — needs breakout above 740p"
+      "ticker": "QTX",
+      "date": "5 Oct",
+      "catalyst": "Profit modestly ahead",
+      "status": "WATCH: require spread ≤3%"
     },
     {
-      "ticker": "MRK",
-      "date": "30 Sep",
-      "catalyst": "Profit upgrade",
-      "status": "WATCH — needs volume and tight spread"
+      "ticker": "NG.",
+      "date": "5 Oct",
+      "catalyst": "EPS guidance raised",
+      "status": "WATCH: do not chase above 1160p"
     },
     {
-      "ticker": "JHD",
-      "date": "1 Oct",
-      "catalyst": "Full-year results",
-      "status": "WAIT FOR RESULTS"
+      "ticker": "SHEL",
+      "date": "7 Oct",
+      "catalyst": "Q3 trading statement",
+      "status": "Prepare before release"
     },
     {
-      "ticker": "JDW",
-      "date": "2 Oct",
-      "catalyst": "Full-year results",
-      "status": "WAIT FOR RESULTS"
-    },
-    {
-      "ticker": "TRB",
-      "date": "2 Oct",
-      "catalyst": "Transaction vote",
-      "status": "WATCH — complex competing proposal"
+      "ticker": "TSCO",
+      "date": "8 Oct",
+      "catalyst": "Half-year results",
+      "status": "Prepare before release"
     }
   ],
-  "updated": "2026-09-30T07:36:23+01:00",
-  "updatedLabel": "07:36 UK, Wed 30 Sep 2026"
+  "updated": "2026-10-05T07:41:30+01:00",
+  "updatedLabel": "07:41 BST, Mon 5 Oct 2026"
 }
