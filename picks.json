@@ -1,101 +1,77 @@
 {
   "picks": [
     {
-      "ticker": "CKN",
-      "name": "Clarkson",
+      "ticker": "AVON",
+      "name": "Avon Technologies",
       "action": "BUY ON CONFIRMATION",
-      "buy": "5100–5150p limit",
-      "target": "5350p / 5480p",
-      "reconsider": "4990p",
-      "potential": "3.9–6.4% gross",
-      "risk": "High; opening gap risk.",
-      "timeframe": "1–5 trading days",
-      "catalyst": "6 Oct earnings upgrade",
-      "reason": "T212 verified; profit floor above published consensus."
+      "buy": "1940–2020p; max 2020p",
+      "target": "2180p",
+      "reconsider": "Below 1850p",
+      "potential": "8–12% gross",
+      "risk": "High: opening gap and full valuation.",
+      "timeframe": "2–10 trading days",
+      "catalyst": "7 Oct FY26 upgrade",
+      "reason": "Profit margin beat guidance and the order book strengthened."
     },
     {
-      "ticker": "AMRQ",
-      "name": "Amaroq",
-      "action": "WATCH",
-      "buy": "No entry",
-      "target": "Not set",
-      "reconsider": "Not set",
-      "potential": "N/A",
-      "risk": "High; gold and mine risks.",
-      "timeframe": "6–8 Oct",
-      "catalyst": "8 Oct FTSE 250 entry",
-      "reason": "T212 verified; strong production, await opening quote."
+      "ticker": "CAML",
+      "name": "Central Asia Metals",
+      "action": "BUY ON CONFIRMATION",
+      "buy": "151–156p; max 156p",
+      "target": "170p",
+      "reconsider": "Below 143p",
+      "potential": "9–13% gross",
+      "risk": "High: metals and acquisition risk.",
+      "timeframe": "3–10 trading days",
+      "catalyst": "7 Oct Q3; approvals 12–15 Oct",
+      "reason": "Improved Sasa output and much higher copper and zinc prices."
     },
     {
-      "ticker": "BYIT",
-      "name": "Bytes Technology",
-      "action": "WAIT FOR RESULTS",
-      "buy": "No entry",
-      "target": "Not set",
-      "reconsider": "Not set",
-      "potential": "N/A",
-      "risk": "High; upgrade partly priced in.",
-      "timeframe": "To 13 Oct",
-      "catalyst": "13 Oct interim results",
-      "reason": "T212 verified; watch margins after September upgrade."
+      "ticker": "NET",
+      "name": "Netcall",
+      "action": "BUY ON CONFIRMATION",
+      "buy": "125–129p; max 129p",
+      "target": "138p",
+      "reconsider": "Below 119p",
+      "potential": "7–10% gross",
+      "risk": "High: results largely pre-announced.",
+      "timeframe": "2–10 trading days",
+      "catalyst": "7 Oct final results",
+      "reason": "Cloud growth, AI sales and the contracted pipeline remain strong."
     }
   ],
   "watchlist": [
     {
-      "ticker": "CAPD",
-      "date": "6 Oct",
-      "catalyst": "Acquisition and guidance rise",
-      "status": "WATCH; T212 verified"
-    },
-    {
       "ticker": "SHEL",
       "date": "7 Oct",
-      "catalyst": "Trading update",
-      "status": "Prepare; T212 unchecked"
+      "catalyst": "Q3 update",
+      "status": "Positive; wait for opening price"
     },
     {
-      "ticker": "IGP / HSW",
+      "ticker": "ORR",
+      "date": "7 Oct",
+      "catalyst": "Maiden resource",
+      "status": "Too thin for £2k–£5k"
+    },
+    {
+      "ticker": "AMRQ",
       "date": "8 Oct",
-      "catalyst": "Trading updates",
-      "status": "Prepare; T212 unchecked"
+      "catalyst": "FTSE 250 inclusion",
+      "status": "Move underway; do not chase"
     },
     {
-      "ticker": "TSCO / FAN",
+      "ticker": "IGP",
       "date": "8 Oct",
-      "catalyst": "Results",
-      "status": "Prepare; T212 unchecked"
+      "catalyst": "Trading statement",
+      "status": "Pre-catalyst watch"
     },
     {
-      "ticker": "NFG / UTG",
-      "date": "8 Oct",
-      "catalyst": "Results / trading update",
-      "status": "Prepare; T212 unchecked"
-    },
-    {
-      "ticker": "HAS",
-      "date": "12 Oct",
-      "catalyst": "Trading update",
-      "status": "Prepare; T212 unchecked"
-    },
-    {
-      "ticker": "BWY",
+      "ticker": "BYIT",
       "date": "13 Oct",
-      "catalyst": "Full-year results",
-      "status": "Prepare; T212 unchecked"
-    },
-    {
-      "ticker": "IHC",
-      "date": "6 Oct unverified",
-      "catalyst": "Calendar flags results",
-      "status": "Release unverified"
-    },
-    {
-      "ticker": "ECO",
-      "date": "6 Oct",
-      "catalyst": "Holding review",
-      "status": "Below prior invalidation"
+      "catalyst": "Half-year results",
+      "status": "Pre-catalyst watch"
     }
   ],
-  "updated": "2026-10-06T07:41:28+01:00",
-  "updatedLabel": "6 Oct 2026, 07:41 BST"
+  "updated": "2026-10-07T07:35:00+01:00",
+  "updatedLabel": "07:35 BST, Wed 7 Oct 2026"
 }
